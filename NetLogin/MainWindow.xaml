@@ -1,0 +1,37 @@
+﻿<Window x:Class="NetLogin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetLogin"
+        mc:Ignorable="d"
+        Title="科创平台网络登录器" Height="220" Width="525">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Label Content="当前IP： " HorizontalAlignment="Left" Margin="40,28,0,0" VerticalAlignment="Top"/>
+		<Label Name="IPLabel" Content="" HorizontalAlignment="Left" Margin="100,28,0,0" VerticalAlignment="Top"/>
+		<Label Content="用户名:" HorizontalAlignment="Left" Margin="40,58,0,0" VerticalAlignment="Top"/>
+		<Label Content="密码：" HorizontalAlignment="Left" Margin="40,88,0,0" VerticalAlignment="Top"/>
+		<TextBox Name="UserName" HorizontalAlignment="Left" Height="20" Margin="100,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+		<PasswordBox Name="UserPass" HorizontalAlignment="Left" Margin="100,93,0,0" VerticalAlignment="Top" Width="120" Height="20"/>
+		<Button Click="LoginClick" Content="登录" HorizontalAlignment="Left" Margin="40,136,0,0" VerticalAlignment="Top" Width="75"/>
+		<Button Click="LogoutClick" Content="注销" HorizontalAlignment="Left" Margin="145,136,0,0" VerticalAlignment="Top" Width="75"/>
+		<TextBox Name="dns0" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="100,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+		<TextBox Name="dns1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="100,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+		<Label Content="主要DNS：" Grid.Column="1" HorizontalAlignment="Left" Margin="33,62,0,0" VerticalAlignment="Top"/>
+		<Label Content="备用DNS：" Grid.Column="1" HorizontalAlignment="Left" Margin="33,90,0,0" VerticalAlignment="Top"/>
+		<Button Click="SetDnsClick" Content="更换DNS" Grid.Column="1" HorizontalAlignment="Left" Margin="39,136,0,0" VerticalAlignment="Top" Width="75"/>
+		<Button Click="AutoDnsClick" Content="设为自动获取" Grid.Column="1" HorizontalAlignment="Left" Margin="151,136,0,0" VerticalAlignment="Top" Width="75"/>
+		<ComboBox SelectionChanged="DnsComoBox_Selected" Name="DnsComoBox" Grid.Column="1" HorizontalAlignment="Left" Margin="100,32,0,0" VerticalAlignment="Top" Width="120">
+
+		</ComboBox>
+		<Label Name="DnsRight" FontSize="8" Foreground="Red" Grid.Column="1" HorizontalAlignment="Left" Margin="39,160,0,0" VerticalAlignment="Top" Height="19"/>
+		<ComboBox Name="NetTypeSelector" HorizontalAlignment="Left" Margin="46,10,0,0" VerticalAlignment="Top" Width="120">
+			<ComboBoxItem IsSelected="True">以太网</ComboBoxItem>
+			<ComboBoxItem >Wi-Fi</ComboBoxItem>
+		</ComboBox>
+	</Grid>
+</Window>
