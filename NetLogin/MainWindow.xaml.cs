@@ -71,12 +71,13 @@ namespace NetLogin
 					else
 					{
 						Console.WriteLine("Sleep");
-						int waitTime = 1000 * 60 * 1;
+						int waitTime = 1000 * 60 * 10;
 						Thread.Sleep(waitTime);
 					}
 						
 				}
 			});
+			autoLoginThread.IsBackground = true;
 			autoLoginThread.Start();
 		}
 
